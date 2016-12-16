@@ -40,6 +40,9 @@ function ClockCtrl($scope) {
     var TYPE_HOURS = "hours";
     var TYPE_MINUTES = "minutes";
     var self = this;
+    if (!self.time){
+        self.time = moment($scope.$parent.$root.time);
+    }        
     
     this.STEP_DEG = 360 / 12;
     this.steps = [];
